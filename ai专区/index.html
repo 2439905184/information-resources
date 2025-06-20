@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ai专区</title>
+    <script src="../js/jsonToOl.js"></script>
+</head>
+<body>
+    <h2>aigc导航</h2>
+    <ol id="aigc_list">
+        <a href="https://zhuanlan.zhihu.com/p/616521013">AIGC</a>
+        <a href="https://www.yuque.com/kas/pm/xug68gtppucl8gfh">AIGC工具导航</a>
+        <a href="/资源网/apk/AIchat 蓝奏云.apk">AI chat apk</a>
+        <a href="https://www.bigbigai.com/gallery/">AI绘画在线</a>
+    </ol>
+    <h2>chatgpt国内镜像资源</h2>
+    <ol id="chatgpt_list">
+    </ol>
+    <script>
+        var chatgpt = {
+          "ai2dog":"https://www.ai2dog.com",
+          "1024dog":"https://www.1024dog.com",
+          "chat.aipod.top":"https://chat.aipod.top",
+          "ai.minihuo":"https://ai.minihuo.com",
+          "c.binjie":"https://c.binjie.fun",
+          "sss.mygpt":"https://sss.mygpt.bid",
+          "cgs.skybyte.me":"https://cgs.skybyte.me",
+          "free.aitom.cc":"https://free.aitom.cc",
+          "chat.pinkfong.cn":"https://chat.pinkfong.cn",
+          "chatba.free2gpt.xyz":"https://chatba.free2gpt.xyz"
+        }
+        jsonToOl(chatgpt, document.getElementById("chatgpt_list"))
+      </script>
+</body>
+</html>
