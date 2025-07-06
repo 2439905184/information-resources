@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>免费在线看专区</title>
+    <script src="../js/jsonToOl.js"></script>
+</head>
+<body>
+    <h2>电影资源</h2>
+    <ol id="free-movie-list"></ol>
+    <h2><a href="https://freelancerdh.free.nf/anime/index.html">动漫资源</a></h2>
+    <h2>影视app资源</h2>
+    <ol id="app-list">
+        <li><a href="https://www.heizhutv.com/">黑猪侠</a></li>
+        <li><a href="https://www.tvmao.com/sjapp/142020.html">木兰影院</a></li>
+    </ol>
+    <script>
+        var movie = {
+    "电影狗搜索":"http://www.dianyinggou.com",
+    "未知搜索":"https://xsear.ch/",
+    "影视森林":"http://www.549.tv",
+    "歪片星球影":"https://waipian3.com/",
+    "4K影视":"https://www.4kvm.com/",
+	"泥巴影院":"https://www.nbyy.tv/",
+	"片库":"https://www.mypianku.net/",
+	"唐人街影院":"https://www.tangrenjie.tv/",
+	"捷华影视":"https://www.jiehua.tv/",
+	"欧乐影院":"https://www.olevod.com/",
+	"优视频":"https://www.uvod.tv/",
+	"独播库":"https://www.duboku.tv/",
+	"胖子视频":"https://www.pangzitv.com/",
+	"555电影":"https://www.o8tv.com/",
+	"瓜子TV":"https://guazitv.tv",
+	"剧嗨":"https://www.juhi.cc",
+	"奈飞中文电影站":"https://yanetflix.com",
+	"Tubitv":"https://tubitv.com",
+	"HOHO TV":"https://hoho.tv/",
+	"大师兄影视":"https://dsxys.com",
+	"爱迪影视":"https://aidi.tv",
+        }
+        jsonToOl(movie, document.getElementById("free-movie-list"))
+    </script>
+</body>
+</html>
