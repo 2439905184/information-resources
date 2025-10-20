@@ -7,55 +7,241 @@
 	<title>软件资源</title>
 	<meta name="绿色软件" content="绿色软件">
 	<style>
-		.link-list
+		 body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            background-color: #f8f9fa;
+            margin: 0;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+        }
+        
+        .search-box {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .search-box input {
+            padding: 10px;
+            width: 300px;
+            border: 1px solid #ddd;
+            border-radius: 4px 0 0 4px;
+        }
+        
+        .search-box button {
+            padding: 10px 20px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+        }
+        
+        .main-category {
+            margin-bottom: 30px;
+        }
+        
+        .main-category > h2 {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 15px 20px;
+            border-radius: 5px;
+            margin: 0 0 15px 0;
+        }
+        
+        .subcategory {
+            margin: 15px 0 15px 20px;
+        }
+        
+        .subcategory > h3 {
+            color: #333;
+            border-left: 4px solid #667eea;
+            padding-left: 15px;
+            margin: 20px 0 15px 0;
+            font-size: 18px;
+        }
+        
+        .download-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 20px 40px;
+        }
+        
+        .download-list li {
+            padding: 0px 15px;
+            border-bottom: 1px solid #eee;
+            transition: background-color 0.3s;
+        }
+        
+        .download-list li:last-child {
+            border-bottom: none;
+        }
+        
+        .download-list li:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .download-list li .fas {
+            margin-right: 10px;
+            color: #667eea;
+        }
+        
+        .download-list a {
+            text-decoration: none;
+            color: #495057;
+            font-weight: 500;
+        }
+        
+        .download-list a:hover {
+            color: #667eea;
+        }
+        
+        hr {
+            border: 0;
+            height: 1px;
+            background: #eee;
+            margin: 30px 0;
+        }
+        
+        .link-list {
+            background-color: wheat;
+            border: solid 2px black;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        
+        .link-list a {
+            margin-right: 15px;
+            text-decoration: none;
+            color: #333;
+        }
+        
+        .link-list a:hover {
+            color: #667eea;
+        }
+		/* .link-list
 		{
 			background-color: wheat;
 			border: solid 2px black;
-		}
+		} */
 	</style>
+	  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 </head>
 <body>
-	<input type="text" placeholder="搜索"><button>搜索</button>
-	<h1>站长推荐</h1>
+	<!-- php pdo mysql -->
+	<!-- <input type="text" placeholder="搜索"><button>搜索</button> -->
+	<!-- <h1>站长推荐</h1>
 	<a href=""></a>
-	<a href=""></a>
-	<hr/>
-	<h1>软件分类</h1>
-	<h1>电脑软件</h1>
-	<dl>
-		<dt>多媒体制作</dt>
-		<dd><a href="https://www.downza.cn/soft/183034.html">ulead gif</a></dd>
-		<dd><a href="../soft/1.html">sunvox</a></dd>
-		<dd><a href="https://16-bits.org/ft2.php">fastTracker2</a></dd>
-		<dd><a href="https://milkytracker.org/">milkytracker</a></dd>
-		<dt>工具软件</dt>
-		<dd><a href="https://gitee.com/zhongyang219/TrafficMonitor">traffic monitor</a></dd>
-		<dd><a href="https://wwzs.lanzouu.com/ifUfu30i8iwf">daemon虚拟光驱</a>（新版）</dd>
-		<dd><a href="https://wwzs.lanzouu.com/iRzhj30i9wha">daemon虚拟光驱4.30.4</a>旧版</dd>
-		<dd><a href="https://calibre-ebook.com/zh_CN">calibre电子书管理</a></dd>
+	<a href=""></a> -->
+	<!-- <hr/> -->
+	<div class="main-category">
+		<h2><i class="fas fa-desktop"></i> 电脑软件</h2>
 		
-		<dt>网络软件</dt>
-		<dd><a href="https://www.bilibili.com/read/cv13791878">switchHosts</a></dd>
-	</dl>
-
+		<!-- 多媒体制作 (主分类) -->
+		<div class="subcategory">
+			<h3>多媒体制作</h3>
+			
+			<!-- 图像处理 (子分类) -->
+			<div class="subcategory">
+				<h4>图像处理</h4>
+				<ul class="download-list">
+					<li>
+						<i class="fas fa-download"></i>
+						<a href="https://soft.3dmgame.com/down/234772.html"></a>
+						<a href="https://www.downza.cn/soft/183034.html">ulead gif</a>
+					</li>
+				</ul>
+			</div>
+			
+			<!-- 音乐制作 (子分类) -->
+			<div class="subcategory">
+				<h4>音乐制作</h4>
+				<ul class="download-list">
+					<li>
+						<i class="fas fa-download"></i>
+						<a href="https://soft.3dmgame.com/down/234772.html"></a>
+						<a href="sunvox.html">sunvox-电子音乐制作</a>
+					</li>
+					<li>
+						<i class="fas fa-download"></i>
+						<a href="https://soft.3dmgame.com/down/234772.html"></a>
+						<a href="https://16-bits.org/ft2.php">fastTracker2</a>
+					</li>
+					<li>
+						<i class="fas fa-download"></i>
+						<a href="https://soft.3dmgame.com/down/234772.html"></a>
+						<a href="https://milkytracker.org/">milkytracker</a>
+					</li>
+				</ul>
+			</div>
+			<div class="subcategory">
+                <h3>工具软件</h3>
+                <ul class="download-list">
+                    <li>
+                        <i class="fas fa-download"></i>
+                        <a href="https://soft.3dmgame.com/down/234772.html"></a>
+                        <a href="https://gitee.com/zhongyang219/TrafficMonitor">traffic monitor</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-download"></i>
+                        <a href="https://soft.3dmgame.com/down/234772.html"></a>
+                        <a href="https://wwzs.lanzouu.com/ifUfu30i8iwf">daemon虚拟光驱</a>（新版）
+                    </li>
+                    <li>
+                        <i class="fas fa-download"></i>
+                        <a href="https://soft.3dmgame.com/down/234772.html"></a>
+                        <a href="https://wwzs.lanzouu.com/iRzhj30i9wha">daemon虚拟光驱4.30.4</a>旧版
+                    </li>
+                    <li>
+                        <i class="fas fa-download"></i>
+                        <a href="https://soft.3dmgame.com/down/234772.html"></a>
+                        <a href="https://calibre-ebook.com/zh_CN">calibre电子书管理</a>
+                    </li>
+                    <li>
+                        <i class="fas fa-download"></i>
+                        <a href="https://soft.3dmgame.com/down/234772.html">archpr压缩文件破解器</a> 
+                        <a href="https://wwzs.lanzouu.com/iqQ7q384qdaf">蓝奏云</a>
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- 网络软件 (主分类) -->
+            <div class="subcategory">
+                <h3>网络软件</h3>
+                <ul class="download-list">
+                    <li>
+                        <i class="fas fa-download"></i>
+                        <a href="https://www.bilibili.com/read/cv13791878">switchHosts</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+	</div>
 	<h1>手机软件</h1>
 	<dl>
 		<dt>多媒体制作</dt>
-		<dd><a href="">NodeVideo （国内团队制作的仿AE软件的安卓软件）</a></dd>
-		<dd><a href="https://meta.appinn.net/t/topic/53977">小萌gif</a></dd>
-		<dd><a href="https://wws.lanzouq.com/iNHn106fqs8j">ffmpegm媒体编码器</a></dd>
-		<dd><a href="https://wwzs.lanzouu.com/ivxnt2x7846b">ffmpegm媒体编码器-分流2</a></dd>
-		<dd><a href="https://lxmusic.toside.cn/">lx-music</a>(一个免费&开源的音乐查找工具)</dd>
+		<dd><i class="fas fa-download"></i><a href="">NodeVideo （国内团队制作的仿AE软件的安卓软件）</a></dd>
+		<dd><i class="fas fa-download"></i><a href="https://meta.appinn.net/t/topic/53977">小萌gif</a></dd>
+		<dd><i class="fas fa-download"></i><a href="https://wws.lanzouq.com/iNHn106fqs8j">ffmpegm媒体编码器</a></dd>
+		<dd><i class="fas fa-download"></i><a href="https://wwzs.lanzouu.com/ivxnt2x7846b">ffmpegm媒体编码器-分流2</a></dd>
+		<dd><i class="fas fa-download"></i><a href="https://lxmusic.toside.cn/">lx-music</a>(一个免费&开源的音乐查找工具)</dd>
 		<dt>工具软件</dt>
-		<dd><a href="http://www.2265.com/soft/270721.html">远程输入法</a></dd>
-		<dd><a href="https://f-droid.org/packages/com.cliffracertech.soundaura/">SoundAura </a>(A background audio player for studying / working.)</dd>
+		<dd><i class="fas fa-download"></i><a href="http://www.2265.com/soft/270721.html">远程输入法</a></dd>
+		<dd><i class="fas fa-download"></i><a href="https://f-droid.org/packages/com.cliffracertech.soundaura/">SoundAura </a>(A background audio player for studying / working.)</dd>
 		<dt>影视软件</dt>
-		<dd><a href="/资源网/软件资源/木兰影院1.2.6.apk">木兰影院</a></dd>
+		<dd><i class="fas fa-download"></i><a href="/资源网/软件资源/木兰影院1.2.6.apk">木兰影院</a></dd>
 	</dl>
 	<h1>程序开发</h1>
 	<dl>
 		<dt>音频处理</dt>
-		<dd><a href="https://juce.com/">JUCE</a></dd>
+		<dd><i class="fas fa-download"></i><a href="https://juce.com/">JUCE</a></dd>
 		<dd>PortAudio</dd>
 		<dd>FMOD</dd>
 		<dd>OpenAL</dd>
@@ -63,7 +249,11 @@
 		<dd>Pure Data</dd>
 		<dd>SuperCollider</dd>
 		<dt>手机编程</dt>
-		<dd><a href="ZandroidLua .apk">ZandroidLua</a></dd>
+		<dd><i class="fas fa-download"></i><a href="ZandroidLua .apk">ZandroidLua</a></dd>
+		<dd><i class="fas fa-download"></i><a href="">iapp</a></dd>
+		<dd><i class="fas fa-download"></i><a href="">AndroidIDE</a></dd>
+		<dd><i class="fas fa-download"></i><a href="">Termux</a></dd>
+		<dd><i class="fas fa-download"></i><a href="">AIDE</a></dd>
 	</dl>
 	<hr/>
 	<h1>开源软件</h1>
@@ -76,15 +266,12 @@
 		<li><a href="">电音制作</a></li>
 		<li><a href="http://">音频处理框架</h2></a></li>
 	</ol> -->
-<h2>软件类</h2> 
+<!-- <h2>软件类</h2> 
 <ol>
-	
-	
-
 </ol>
 <ol>
 	
-</ol>
+</ol> -->
 
 <!-- vpn属于敏感内容，直接走国外网盘或者外链 -->
 <!-- 永硕e盘，绝对稳 -->
@@ -94,13 +281,25 @@
 
 
 <!-- 排行榜 -->
-<style>
+<!-- <style>
 	.pai > h2
 	{
 		font-size:14px;
 	}
-</style>
-<div class="pai">
+</style> -->
+<!-- <h2>行业软件</h2>
+<ol>
+    <li>农业</li>
+    <li>畜牧业</li>
+    <li>工业</li>
+    <li>教育软件</li>
+    <li>文艺</li>
+    <li>土木工程</li>
+    <li>居民服务业</li>
+    <li>网络公司</li>
+</ol> -->
+<!-- php -->
+<!-- <div class="pai">
 	<table border="2px">
 		<tr>
 			<th>当下热门下载</th>
@@ -113,7 +312,11 @@
 	</table>
 	<h2></h2>
 	<h2></h2>
-</div>
+</div> -->
+<h2>编辑推荐</h2>
+<ol>
+    <li><a href="https://aardio.com/">aardio快速桌面软件开发</a></li>
+</ol>
 <h2>相关链接</h2>
 <a href="https://www.iplaysoft.com/">异次元软件世界</a>
 <div class="link-list">
