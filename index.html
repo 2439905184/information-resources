@@ -1,203 +1,350 @@
-<!-- https://www.appinn.com/ -->
-<!-- 照抄小众软件网站 -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>信息资源网</title>
-    <meta name="玩趣网" content="游玩各种有意思的小玩意和技术">
-    <!-- 新 Bootstrap4 核心 CSS 文件 -->
-<link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/twitter-bootstrap/4.6.1/css/bootstrap.min.css">
- 
-<!-- jQuery文件。务必在bootstrap.min.js 之前引入 -->
-<script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js"></script>
- 
-<!-- bootstrap.bundle.min.js 用于弹窗、提示、下拉菜单，包含了 popper.min.js -->
+    <meta name="description" content="游玩各种有意思的小玩意和技术">
+    <!-- Bootstrap4 CSS -->
+    <link rel="stylesheet" href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/twitter-bootstrap/4.6.1/css/bootstrap.min.css">
+    <!-- jQuery和Bootstrap JS -->
+<!-- <script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js"></script>
 <script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/popper.js/2.11.2/umd/popper.min.js"></script>
- 
-<!-- 最新的 Bootstrap4 核心 JavaScript 文件 -->
-<script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/twitter-bootstrap/4.6.1/js/bootstrap.min.js"></script>
-    <!-- <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/css/bootstrap.min.css"> -->
-    <!-- <script src="https://cdn.staticfile.org/jquery/3.2.1/jquery.min.js"></script> -->
-    <!-- <script src="https://cdn.staticfile.org/popper.js/1.15.0/umd/popper.min.js"></script> -->
-    <!-- <script src="https://cdn.staticfile.org/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script> -->
-<!-- <script src="https://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script> -->
-    
+<script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/twitter-bootstrap/4.6.1/js/bootstrap.min.js"></script> -->
+
+    <!-- Font Awesome 图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-color: #f8f9fa;
+            font-family: 'Microsoft YaHei', sans-serif;
+        }
+        
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px rgba(0,0,0,.1);
+        }
+        
+        /* .navbar {
+            background-color: #ffffff !important;
+            box-shadow: 0 2px 4px rgba(0,0,0,.05);
+            border-radius: 0 !important;
+            margin-bottom: 2rem;
+        }
+        
+        .navbar-brand {
+            font-weight: bold;
+            color: #667eea !important;
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            transition: all 0.3s;
+        }
+        
+        .nav-link:hover {
+            color: #667eea !important;
+            transform: translateY(-2px);
+        }
+         */
+        .section-title {
+            position: relative;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+            border-bottom: 3px solid #667eea;
+            color: #333;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -2px;
+            left: 0;
+            width: 50px;
+            height: 3px;
+            background: #764ba2;
+        }
+        
+        .card {
+            transition: all 0.3s ease;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            margin-bottom: 20px;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
+        }
+        
+        .card-header {
+            background: linear-gradient(to right, #667eea, #764ba2);
+            color: white;
+            border-radius: 10px 10px 0 0 !important;
+            font-weight: bold;
+        }
+        
+        .list-group-item {
+            border: none;
+            border-bottom: 1px solid #eee;
+            transition: background-color 0.2s;
+        }
+        
+        .list-group-item:last-child {
+            border-bottom: none;
+        }
+        
+        .list-group-item:hover {
+            background-color: #f8f9fa;
+        }
+        
+        .list-group-item a {
+            text-decoration: none;
+            color: #495057;
+            font-weight: 500;
+        }
+        
+        .list-group-item a:hover {
+            color: #667eea;
+        }
+        
+        .badge-category {
+            background: linear-gradient(to right, #667eea, #764ba2);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 20px;
+            font-size: 0.8em;
+        }
+        
+        footer {
+            background: #343a40;
+            color: white;
+            padding: 2rem 0;
+            margin-top: 3rem;
+        }
+        
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            background: #667eea;
+            color: white;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+            z-index: 1000;
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+        
+        .back-to-top.show {
+            opacity: 1;
+        }
+        
+        .category-icon {
+            margin-right: 10px;
+            color: #667eea;
+        }
+    </style>
+    <link rel="stylesheet" href="css/nav.css"/>
 </head>
 <body>
-    <h1>信息资源网</h1>
-    <nav class="navbar navbar-expand-sm bg-light">
-        <ul class="navbar-nav">
-          <li class="nav-item">
-              <a class="nav-link" href="#">首页</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="免费在线看专区/index.html">免费在线看专区</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="电音资源/list.html">电音资源</a>
-          </li>
-              <!-- s<li class="nav-item">家庭民科实验组</li> -->
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="好玩的开源小玩意/list.html">开源专区</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="游戏资源/list.html">游戏资源</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="在线平台/list.html">在线游戏平台</a>
-          </li>
-          <li class="nav-item">
-              <a class="nav-link" href="软件资源/list.html">软件资源</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="新闻在线/index.html">新闻在线</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="安卓专区/index.html">安卓专区</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="ai专区/index.html">AI专区</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="电子书资源/index.html">电子书资源</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="电脑专区/index.html">电脑专区</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="好玩的/index.html">好玩的</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="云服务器_虚拟主机/index.html">云服务器/虚拟主机</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="逆向_破解.html">逆向/破解</a>
-        </li>
-              <!-- <div class="nav-link"><a href="">公众参与</div>
-              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">专题专栏</a>
-          </li> -->
-        </ul>
-      </nav>
-      <!-- <h2>每月推荐专栏</h2>
-      <p>{{内容模板}}</p> -->
-      <hr/>
-      <h2>在线工具</h2>
-      <ol>
-        <li><a href="https://convertio.co/zh/">convertio.co在线文件转换器</a></li>
-      </ol>
-      <h2>软件新闻在线</h2>
-      <ol>
-        <li><a href="https://b23.tv/79rNVs0">开源下载软件：Ghost Downloader 3，多达256线程下载器，媲美IDM，支持 Windows、macOS 和 Linux 系统-哔哩哔哩】</a></li>
-        <li><a href="https://zhuanlan.zhihu.com/p/1939836323843249331">Xget-全球资源光速下载</a> <a href="https://xuc.xi-xu.me/">Xget URL 转换器</a></li>
-        <li><a href="https://b23.tv/VJSHg26">【【🔥像素革命】PixiEditor 2.0横空出世：PS+Blender合体？开源免费碾压付费软件！#像素艺术 #矢量绘图 #2D动画 #节点编辑 #开源设计-哔哩哔哩】</a></li>
-        <li><a href="https://www.myandroid.org/">在线安卓模拟器</a></li>
-        <li><a href="https://lz.qaiu.top/">网盘直链解析</a></li>
-        <li><a href="">解压缩全能王-云解密破解压缩文件密码</a>（安卓）</li>
-        <li><a href="https://soft.3dmgame.com/down/234772.html">archpr</a> <a href="https://wwzs.lanzouu.com/iqQ7q384qdaf">蓝奏云</a></li>
-        <li><a href="https://xkh123.lanzoum.com/iWmdt0nst87g">7z解压缩密码破解软件</a> <a href="https://wwzs.lanzouu.com/iLa8i384qwba">备用链接</a></li>
-      </ol>
-      <h2>资源在线</h2>
-      <ol>
-        <li><a href="https://www.sakuraxy.top/">玄夜の资源小站 - 获取千万好用软件游戏以及动漫推荐 - 这是玄夜的资源小站</a></li>
-        <li><a href="https://cdrom.gistwillan.top/">cd-rom归档站</a></li>
-        <li><a href="https://www.sucaizy.com/928/html">值得收藏，免版权可商用！2100+款免费可商用音效素材网站，附打包网盘资源整合包 小森平音效</a></li>
-        <li><a href="https://taira-komori.net/freesoundcn.html">小森平的免费下载音效</a></li>
-        <li><a href="https://www.zhiyuanpro.com/">知源网</a></li>
-      </ol>
-      <h2>AI在线</h2>
-      <a href="AI在线/AIGC导航.html">ai在线</a>
-      <h2>安卓玩机</h2>
-      <div>
-      <p>安卓底层 tag:（游戏引擎相关，渲染引擎）</p>
-      <p>libGLES_android.so就是安卓底层渲染引擎的动态链接库</p>
-      <p>文件路径：/system/lib/egl</p>
-      <p>参考手机：oppor813t</p>
-      <h2>安卓/linux/termux专区</h2>
+    <!-- 顶部标题区域 -->
+    <div class="header text-center">
+        <h1><i class="fas fa-cloud-download-alt"></i> 信息资源网</h1>
+        <p class="lead">收集各类优质资源，让获取信息更简单</p>
     </div>
-    <div>
-      <h3>root</h3>
-      <a href="https://root99.cn">root99</a>
-      <p>apatch root方式</p>
-      <p>shizuku 玩机</p>
+    <nav class="menu">
+      <ul>
+        <li><i class="fas fa-home"></i><a href="index.html">首页</a></li>
+        <li><a class="nav-link" href="免费在线看专区/index.html"><i class="fas fa-film"></i>影视资源</a></li>
+        <li>游戏资源<i class="fas fa-chevron-down"></i>
+            <ul>
+                <li><a href="电脑专区/电脑游戏/index.html">电脑游戏</a></li>
+                <li>安卓游戏</li>
+                <li><a href="游戏资源/list.html">游戏资源</a></li>
+                <li><a href="在线平台/list.html">在线玩游戏</li>
+            </ul>
+        </li>
+        <li>软件资源</li>
+        <li><a href="安卓专区/index.html">安卓专区</a><i class="fab fa-android category-icon"></i></li>
+        <li><a href="电子书资源/index.html">电子书资源</a></li>
+        <li>好玩的
+            <ul>
+                <li><a href="好玩的/index.html">有趣好玩的网站</a></li>
+                <li><a href="好玩的开源小玩意/list.html">好玩的开源小玩意</a></li>
+            </ul>
+        </li>
+        <li><i class="fas fa-music"></i><a href="电音资源/list.html"></a>电音资源</li>
+        <li>软件开发资源
+            <ul>
+                <li><a href="软件开发资源/index.html">编程开发资源</a></li>
+                <li><a href="逆向_破解.html">逆向/破解</a></li>
+            </ul>
+        <li><a href="ai专区/index.html">AI专区</a></li>
+        <li><a href="新闻在线/index.html">(软件/游戏圈)新闻在线</a></li>
+        <li><a href="云服务器_虚拟主机/index.html">云服务器/虚拟主机</a></li>
+    </ul>
+    </nav>
+    <h2>其他网址导航</h2>
+    <a href=""></a>
+
+    <div class="container">
+        <!-- 在线工具 -->
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-tools category-icon"></i>在线工具
+            </div>
+            <div class="card-body">
+                <ol class="list-group list-group-flush">
+                    <li class="list-group-item"><i class="fas fa-file-export"></i> <a href="https://convertio.co/zh/">convertio.co在线文件转换器</a></li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- 软件新闻在线 -->
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-bullhorn category-icon"></i>软件新闻在线
+            </div>
+            <div class="card-body">
+                <ol class="list-group list-group-flush">
+                    <li class="list-group-item"><i class="fab fa-bilibili"></i> <a href="https://b23.tv/79rNVs0">开源下载软件：Ghost Downloader 3，多达256线程下载器，媲美IDM，支持 Windows、macOS 和 Linux 系统-哔哩哔哩</a></li>
+                    <li class="list-group-item"><i class="fab fa-zhihu"></i> <a href="https://zhuanlan.zhihu.com/p/1939836323843249331">Xget-全球资源光速下载</a> <a href="https://xuc.xi-xu.me/">Xget URL 转换器</a></li>
+                    <li class="list-group-item"><i class="fab fa-bilibili"></i> <a href="https://b23.tv/VJSHg26">【🔥像素革命】PixiEditor 2.0横空出世：PS+Blender合体？开源免费碾压付费软件！#像素艺术 #矢量绘图 #2D动画 #节点编辑 #开源设计-哔哩哔哩</a></li>
+                    <li class="list-group-item"><i class="fas fa-mobile-alt"></i> <a href="https://www.myandroid.org/">在线安卓模拟器</a></li>
+                    <li class="list-group-item"><i class="fas fa-link"></i> <a href="https://lz.qaiu.top/">网盘直链解析</a></li>
+                    <li class="list-group-item"><i class="fas fa-unlock"></i> <a href="">解压缩全能王-云解密破解压缩文件密码</a>（安卓）</li>
+                    <li class="list-group-item"><i class="fas fa-download"></i> <a href="https://soft.3dmgame.com/down/234772.html">archpr</a> <a href="https://wwzs.lanzouu.com/iqQ7q384qdaf">蓝奏云</a></li>
+                    <li class="list-group-item"><i class="fas fa-unlock"></i> <a href="https://xkh123.lanzoum.com/iWmdt0nst87g">7z解压缩密码破解软件</a> <a href="https://wwzs.lanzouu.com/iLa8i384qwba">备用链接</a></li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- 资源在线 -->
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-cloud-download-alt category-icon"></i>资源在线
+            </div>
+            <div class="card-body">
+                <ol class="list-group list-group-flush">
+                    <li class="list-group-item"><i class="fas fa-globe"></i> <a href="https://www.sakuraxy.top/">玄夜の资源小站 - 获取千万好用软件游戏以及动漫推荐 - 这是玄夜的资源小站</a></li>
+                    <li class="list-group-item"><i class="fas fa-archive"></i> <a href="https://cdrom.gistwillan.top/">cd-rom归档站</a></li>
+                    <li class="list-group-item"><i class="fas fa-volume-up"></i> <a href="https://www.sucaizy.com/928/html">值得收藏，免版权可商用！2100+款免费可商用音效素材网站，附打包网盘资源整合包 小森平音效</a></li>
+                    <li class="list-group-item"><i class="fas fa-volume-up"></i> <a href="https://taira-komori.net/freesoundcn.html">小森平的免费下载音效</a></li>
+                    <li class="list-group-item"><i class="fas fa-globe"></i> <a href="https://www.zhiyuanpro.com/">知源网</a></li>
+                </ol>
+            </div>
+        </div>
+        <!-- 网站资源 -->
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-globe category-icon"></i>网站资源
+            </div>
+            <div class="card-body">
+                <div class="row">
+                    <div class="col-md-6 col-lg-3 mb-3">
+                        <a href="https://blenderco.cn/" class="btn btn-block btn-outline-info">blenderco.cn 布的资源网</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-3">
+                        <a href="https://jundagame.top/" class="btn btn-block btn-outline-success">军大君独立开发工具站</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-3">
+                        <a href="https://www.xtdowner.com/index/" class="btn btn-block btn-outline-warning">小天短视频工具</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-3">
+                        <a href="https://fmhy.vercel.app/gamingpiracyguide" class="btn btn-block btn-outline-danger">fmhy-The largest collection of Free stuff on the Internet!</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-3">
+                        <a href="" class="btn btn-block btn-outline-secondary">异次元软件世界-软件改变生活</a>
+                    </div>
+                    <div class="col-md-6 col-lg-3 mb-3">
+                      <a href="https://0x3.com/" class="btn btn-block btn-outline-secondary">0x3.html 导航</a>
+                  </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- 游戏开发素材 -->
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-paint-brush category-icon"></i>游戏开发素材
+            </div>
+            <div class="card-body">
+                <ol class="list-group list-group-flush">
+                    <li class="list-group-item"><i class="fas fa-image"></i> <a href="https://pixlab24.com/">pixlab24</a></li>
+                </ol>
+            </div>
+        </div>
+
+        <!-- 有意思的网站 -->
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-heart category-icon"></i>有意思的网站
+            </div>
+            <div class="card-body">
+                <a href="https://www.skylinewebcams.com/" class="btn btn-outline-info mr-2 mb-2"><i class="fas fa-video"></i> 世界各地的公开网络摄像头</a>
+                <a href="https://eja.tv/" class="btn btn-outline-success mr-2 mb-2"><i class="fas fa-tv"></i> eja.tv全世界电视台直播</a>
+            </div>
+        </div>
+
+        <!-- 软件搜搜 -->
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-search category-icon"></i>软件搜搜
+            </div>
+            <div class="card-body">
+                <a href="https://rjss.pages.dev/" class="btn btn-primary"><i class="fas fa-search"></i> 软件搜搜</a>
+                <a href="各种网络信息.txt" class="btn btn-secondary"><i class="fas fa-file-alt"></i> 各种网络信息</a>
+            </div>
+        </div>
+
+        <!-- windows实用工具 -->
+        <div class="card">
+            <div class="card-header">
+                <i class="fab fa-windows category-icon"></i>windows实用工具
+            </div>
+            <div class="card-body">
+                <ol class="list-group list-group-flush">
+                    <li class="list-group-item"><i class="fas fa-trash"></i> <a href="https://geekuninstaller.com/download">geek uninstaller</a></li>
+                    <li class="list-group-item"><i class="fas fa-plane"></i> <a href="https://ikuuu.one/user">ikuu-机场-访问外国网络</a></li>
+                    <li class="list-group-item"><i class="fas fa-key"></i> <a href="http://kms.cx">windows激活</a></li>
+                </ol>
+                
+                <h5 class="mt-3">软件资源</h5>
+                <ol class="list-group list-group-flush">
+                    <li class="list-group-item"><i class="fas fa-box"></i> <a href="https://ruancang.net/">软仓</a></li>
+                </ol>
+            </div>
+        </div>
     </div>
-      <!-- <p>oppo r813t老旧手机刷成tinycore linux</p> -->
-      <hr/>
-      <h2>网站资源</h2>
-      <a href="https://blenderco.cn/">blenderco.cn 布的资源网</a>
-      <a href="https://jundagame.top/">军大君独立开发工具站</a>
-      <a href="https://www.xtdowner.com/index/">小天短视频工具</a>
-      <hr/>
-      <h2>游戏开发素材</h2>
-      <ol>
-		<li><a href="https://pixlab24.com/">pixlab24</a>
-      </ol>
-      <h2>有意思的网站</h2>
-      <a href="https://www.skylinewebcams.com/">世界各地的公开网络摄像头</a>
-      <a href="https://eja.tv/">eja.tv全世界电视台直播</a>
 
-      <h2>软件搜搜</h2>
-      <a href="https://rjss.pages.dev/">软件搜搜</a>
+    <!-- 回到顶部按钮 -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
 
-      <h2>fmhy</h2>
-      <a href="https://fmhy.vercel.app/gamingpiracyguide">fmhy-The largest collection of Free stuff on the Internet!</a>
-
-      <a href="各种网络信息.txt">各种网络信息</a>
-      <h2>windows实用工具</h2>
-      <ol>
-        <li><a href="https://geekuninstaller.com/download">geek uninstaller</a></li>
-        <li><a href="https://ikuuu.one/user">ikuu-机场-访问外国网络</a></li>
-        <li><a href="http://kms.cx">windows激活</a></li>
-      </ol>
-      
-      <ol>软件资源
-        <li><a href="https://ruancang.net/">软仓</a></li>
-      </ol>
-      <script src="js/jsontoli.js"></script>
-      <script>
-        
-        var free_movie = {
-	"4K影视":"https://www.4kvm.com/",
-	"泥巴影院":"https://www.nbyy.tv/",
-	"片库":"https://www.mypianku.net/",
-	"唐人街影院":"https://www.tangrenjie.tv/",
-	"捷华影视":"https://www.jiehua.tv/",
-	"欧乐影院":"https://www.olevod.com/",
-	"优视频":"https://www.uvod.tv/",
-	"独播库":"https://www.duboku.tv/",
-	"胖子视频":"https://www.pangzitv.com/",
-	"555电影":"https://www.o8tv.com/",
-	"瓜子TV":"https://guazitv.tv",
-	"剧嗨":"https://www.juhi.cc",
-	"奈飞中文电影站":"https://yanetflix.com",
-	"Tubitv":"https://tubitv.com",
-	"HOHO TV":"https://hoho.tv/",
-	"大师兄影视":"https://dsxys.com",
-	"爱迪影视":"https://aidi.tv",
-  "电影狗搜索":"http://www.dianyinggou.com",
-  "未知搜索":"https://xsear.ch/",
-  "影视森林":"http://www.549.tv",
-  "歪片星球影":"https://waipian3.com/",
-  "人人影视":"https://m.rrmj.plus/pc",
-  "zj4k.cc":"https://zj4k.cc/"
-}
-      var chatgpt ={
-        "ai2dog":" https://www.ai2dog.com",
-        "1024dog":"https://www.1024dog.com",
-        "chat.aipod":"https://chat.aipod.top",
-        "ai.minihuo":"https://ai.minihuo.com",
-        "c.binjie.fuin":"https://c.binjie.fun",
-        "sss.mygpt.bid":"https://sss.mygpt.bid",
-        "cgs.skybyte.me":"https://cgs.skybyte.me",
-        "free.aitom.cc:":"https://free.aitom.cc",
-        "chat.pinkfong.cn":"https://chat.pinkfong.cn",
-        "chatba.free2gpt.xyz":"https://chatba.free2gpt.xyz"
-      }
-       jsonToLi(free_movie,document.getElementById("free-movie")) 
-       jsonToLi(chatgpt,document.getElementById("chatgpt"))
-      </script>
+    <!-- Footer -->
+    <footer class="text-center">
+        <div class="container">
+            <p>&copy; 2023 信息资源网. All rights reserved.</p>
+            <p>收集各类优质资源，让获取信息更简单</p>
+        </div>
+    </footer>
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://lf9-cdn-tos.bytecdntp.com/cdn/expire-1-M/popper.js/2.11.2/umd/popper.min.js"></script>
+    <script src="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/twitter-bootstrap/4.6.1/js/bootstrap.min.js"></script>
 </body>
 </html>
