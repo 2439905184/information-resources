@@ -1,13 +1,21 @@
 <?php
-// 应该为动态内容
-function getRecommand(type)
+// 应该为动态内容 todo rss订阅
+function getRecommand($type)
 {
-    if(type == "software")
+    if ($type == "software")
     {
-        $recommand = {
-            "softA":"a.exe"
-        }
-        return Recommand
+        $recommand = array(
+            "softwareA"=>"a.exe");
+
+        return $recommand;
+    }
+    elseif ($type == "game")
+    {
+
+    }
+    elseif ($type == "website")
+    {
+
     }
 }
 ?>
