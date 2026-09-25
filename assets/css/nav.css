@@ -1,60 +1,90 @@
-ul li{
-    list-style: none;
-    /* 清除列表原有样式 */
+/* ===== 基础 ===== */
+* { box-sizing: border-box; }
+
+ul { list-style: none; margin: 0; padding: 0; }
+
+/* ===== 导航栏容器 ===== */
+.menu {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 100%;
+  min-height: 60px;
+  padding: 0 16px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+  font-size: 14px;
+  font-family: "Microsoft YaHei", system-ui, sans-serif;
 }
-.menu ul li a,.menu ul li,.menu ul li ul li a{
-    text-decoration: none;
-    color: white;
+
+.menu h3 {
+  margin: 0 20px 0 0;
+  font-size: 16px;
+  line-height: 60px;
+  color: #fff;
+  white-space: nowrap;
+  flex: none;
 }
-.menu{
-    width: 100%;
-    height: 60px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    box-sizing: border-box;
+
+/* 一级 ul */
+.menu > ul {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  flex: 1;
+  min-width: 0;
 }
-.menu::after {
-    content: "";
-    display: table;
-    clear: both;
+
+/* 一级 li */
+.menu > ul > li {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 60px;
+  padding: 0 12px;
+  cursor: pointer;
+  white-space: nowrap;
+  transition: background-color .25s;
 }
-.menu ul
-{
-    margin:0;
-    padding:0;
-    list-style: none;
+
+.menu > ul > li:hover { background: rgba(255,255,255,.16); }
+
+/* 链接 */
+.menu a {
+  color: #fff;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
 }
-.menu>ul>li{
-    float: left;
-    /* 使列表(一级菜单)横向 */
-    margin-right: 30px;
-    margin-top: 20px;
-    /* 设置一级菜单内容的位置 */
-    position: relative;
+
+/* 小箭头 */
+.menu > ul > li > i { margin-left: 6px; font-size: 12px; }
+
+/* 下拉菜单 */
+.menu ul ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 170px;
+  padding: 6px 0;
+  display: none;
+  flex-direction: column;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 8px 20px rgba(0,0,0,.25);
+  z-index: 1000;
 }
-.menu ul li ul{
-    width: 150px;
-    min-height: 160px;
-    margin-left: -30px;
-    /* height: 160px; */
-    /* margin-left: -50px; */
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);;
-    display: none;
-    position: absolute;
-    top: 20px;
-    z-index: 100;
-    padding: 10px 0;
-    /* 设置初始为不显示 */
-    /* position: absolute; */
+
+.menu ul li:hover > ul { display: flex; }
+
+.menu ul ul li { width: 100%; }
+
+.menu ul ul li a,
+.menu ul ul li > span {
+  display: block;
+  padding: 9px 18px;
+  white-space: nowrap;
 }
-.menu ul li:hover ul{
-    display: block;
-    /* 当一级菜单的li获取hover后将二级菜单的ul显示出来 */
-}
-.menu ul li:hover{
-    background-color:#667eea;
-}
-.menu ul li ul li {
-    float: none;
-    margin: 0;
-    padding: 8px 20px;
-}
+
+.menu ul ul li:hover { background: rgba(255,255,255,.16); }

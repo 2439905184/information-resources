@@ -15,125 +15,8 @@
 
     <!-- Font Awesome 图标 -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        body {
-            background-color: #f8f9fa;
-            font-family: 'Microsoft YaHei', sans-serif;
-        }
-        
-        .header {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            padding: 2rem 0;
-            margin-bottom: 2rem;
-            box-shadow: 0 4px 6px rgba(0,0,0,.1);
-        }
-        .section-title {
-            position: relative;
-            padding-bottom: 10px;
-            margin-bottom: 20px;
-            border-bottom: 3px solid #667eea;
-            color: #333;
-        }
-        
-        .section-title::after {
-            content: '';
-            position: absolute;
-            bottom: -2px;
-            left: 0;
-            width: 50px;
-            height: 3px;
-            background: #764ba2;
-        }
-        
-        .card {
-            transition: all 0.3s ease;
-            border: none;
-            border-radius: 10px;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-            margin-bottom: 20px;
-        }
-        
-        .card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 20px rgba(0,0,0,0.15);
-        }
-        
-        .card-header {
-            background: linear-gradient(to right, #667eea, #764ba2);
-            color: white;
-            border-radius: 10px 10px 0 0 !important;
-            font-weight: bold;
-        }
-        
-        .list-group-item {
-            border: none;
-            border-bottom: 1px solid #eee;
-            transition: background-color 0.2s;
-        }
-        
-        .list-group-item:last-child {
-            border-bottom: none;
-        }
-        
-        .list-group-item:hover {
-            background-color: #f8f9fa;
-        }
-        
-        .list-group-item a {
-            text-decoration: none;
-            color: #495057;
-            font-weight: 500;
-        }
-        
-        .list-group-item a:hover {
-            color: #667eea;
-        }
-        
-        .badge-category {
-            background: linear-gradient(to right, #667eea, #764ba2);
-            color: white;
-            padding: 5px 10px;
-            border-radius: 20px;
-            font-size: 0.8em;
-        }
-        
-        footer {
-            background: #343a40;
-            color: white;
-            padding: 2rem 0;
-            margin-top: 3rem;
-        }
-        
-        .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background: #667eea;
-            color: white;
-            width: 40px;
-            height: 40px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 2px 10px rgba(0,0,0,0.2);
-            z-index: 1000;
-            opacity: 0;
-            transition: opacity 0.3s;
-        }
-        
-        .back-to-top.show {
-            opacity: 1;
-        }
-        
-        .category-icon {
-            margin-right: 10px;
-            color: #667eea;
-        }
-    </style>
-    <link rel="stylesheet" href="css/nav.css"/>
+    <link rel="stylesheet" href="assets/css/nav.css"/>
+    <link rel="stylesheet" href="assets/css/index.css">
 </head>
 <body>
     <!-- 顶部标题区域 -->
@@ -142,43 +25,61 @@
         <p class="lead">收集各类优质资源，让获取信息更简单</p>
     </div>
     <nav class="menu">
-      <ul>
-        <li><i class="fas fa-home"></i><a href="index.html">首页</a></li>
-        <li><a class="nav-link" href="免费在线看专区/index.html"><i class="fas fa-film"></i>影视资源</a></li>
-        <li>游戏资源<i class="fas fa-chevron-down"></i>
-            <ul>
-                <li><a href="电脑专区/电脑游戏/index.html">电脑游戏</a></li>
-                <li>安卓游戏</li>
-                <li><a href="游戏资源/list.html">游戏资源</a></li>
-                <li><a href="在线平台/list.html">在线玩游戏</li>
-            </ul>
-        </li>
-        <li><a href="软件资源/index.html">软件资源</a></li>
-        <li><a href="安卓专区/index.html">安卓专区</a><i class="fab fa-android category-icon"></i></li>
-        <li><a href="电子书资源/index.html">电子书资源</a></li>
-        <li>好玩的
-            <ul>
-                <li><a target="_blank" href="好玩的/index.html">有趣好玩的网站</a></li>
-                <li><a target="_blank" href="好玩的开源小玩意/list.html">好玩的开源小玩意</a></li>
-                <li><a target="_blank" href="https://dopamineshopping.com/zh">假装购物</a></li>
-                <li><a target="_blank" href="https://youquhome.com/qingsong/">有趣网址之家</a></li>
-                <li><a target="_blank" href="https://io808.com/">tr808鼓机在线版</a></li>
-            </ul>
-        </li>
-        <li><i class="fas fa-music"></i><a href="电音资源/list.html">电音资源</a></li>
-        <li>软件开发资源
-            <ul>
-                <li><a href="软件开发资源/index.html">编程开发资源</a></li>
-                <li><a href="逆向_破解.html">逆向/破解</a></li>
-            </ul>
-        <li><a href="ai专区/index.html">AI专区</a></li>
-        <li><a href="新闻在线/index.html">(软件/游戏圈)新闻在线</a></li>
-        <li><a href="云服务器_虚拟主机/index.html">云服务器/虚拟主机</a></li>
-        <li><a href="影迷工具.html">影迷工具</a></li>
-        <li><a href="站长区/index.html">站长区</a></li>
-        <li><a href="tg.html">telegrum（纸飞机）群组</a></li>
-        <li><a href="https://www.mksrc.cn">创业搭子铺</a></li>
-    </ul>
+        <h3>资源区</h3>
+        <ul>
+            <li><i class="fas fa-home"></i><a href="index.html">首页</a></li>
+            <li><a class="nav-link" href="免费在线看专区/index.html"><i class="fas fa-film"></i>影视资源</a></li>
+    
+            <li>
+                游戏资源<i class="fas fa-chevron-down"></i>
+                <ul>
+                    <li><a href="电脑专区/电脑游戏/index.html">电脑游戏</a></li>
+                    <li><a href="安卓专区/安卓游戏/index.html">安卓游戏</a></li>
+                    <li><a href="游戏资源/list.html">游戏资源</a></li>
+                    <li><a href="在线平台/list.html">在线玩游戏</a></li>
+                </ul>
+            </li>
+    
+            <li><a href="软件资源/index.html">软件资源</a></li>
+            <li><a href="安卓专区/index.html">安卓专区</a><i class="fab fa-android category-icon"></i></li>
+            <li><a href="电子书资源/index.html">电子书资源</a></li>
+    
+            <li>
+                好玩的<i class="fas fa-chevron-down"></i>
+                <ul>
+                    <li><a target="_blank" href="好玩的/index.html">有趣好玩的网站</a></li>
+                    <li><a target="_blank" href="好玩的开源小玩意/list.html">好玩的开源小玩意</a></li>
+                    <li><a target="_blank" href="https://dopamineshopping.com/zh">假装购物</a></li>
+                    <li><a target="_blank" href="https://youquhome.com/qingsong/">有趣网址之家</a></li>
+                    <li><a target="_blank" href="https://io808.com/">tr808鼓机在线版</a></li>
+                </ul>
+            </li>
+    
+            <li><i class="fas fa-music"></i><a href="电音资源/list.html">电音资源</a></li>
+    
+            <li>
+                软件开发资源<i class="fas fa-chevron-down"></i>
+                <ul>
+                    <li><a href="软件开发资源/index.html">编程开发资源</a></li>
+                    <li><a href="逆向_破解.html">逆向/破解</a></li>
+                </ul>
+            </li>
+    
+            <li><a href="ai专区/index.html">AI专区</a></li>
+            <li><a href="新闻在线/index.html">(软件/游戏圈)新闻在线</a></li>
+            
+            <li><a href="影迷工具.html">影迷工具</a></li>
+            <li><a href="tg.html">telegrum（纸飞机）群组</a></li>
+            <li><a href="https://www.mksrc.cn">创业搭子铺</a></li>
+        </ul>
+    </nav>
+    
+    <nav class="menu">
+        <h3>站长区</h3>
+        <ul>
+            <li><a href="站长区/index.html">站长区</a></li>
+            <li><a href="云服务器_虚拟主机/index.html">云服务器/虚拟主机</a></li>
+        </ul>
     </nav>
     <h2>其他网址导航</h2>
 
