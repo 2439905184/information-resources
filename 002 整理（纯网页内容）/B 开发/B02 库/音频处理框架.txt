@@ -1,0 +1,15 @@
+JUCE
+
+PortAudio
+
+OpenAL
+
+FMOD
+
+Max/MSP
+
+Pure Data
+
+SuperCollider
+
+<a href="https://github.com/mmontag/chip-player-js">chip-player.js</a>
