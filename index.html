@@ -1,4 +1,105 @@
-<h3>相关链接</h3>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>信息资源网</title>
+	<style>
+		/* ===== 基础样式 ===== */
+		* {
+		  margin: 0;
+		  padding: 0;
+		  box-sizing: border-box;
+		}
+	
+		body {
+		  font-family: "Microsoft YaHei", sans-serif;
+		  background: #f5f5f5;
+		}
+	
+		/* ===== 导航条外框 ===== */
+		.navbar {
+		  background: black;
+		  display: flex;          /* 让一级菜单横向排列 */
+		  list-style: none;       /* 去掉小圆点 */
+		}
+	
+		/* ===== 一级菜单项 ===== */
+		.navbar > li {
+		  position: relative;     /* 关键：给二级菜单做定位参考 */
+		}
+	
+		.navbar > li > a {
+		  display: block;
+		  padding: 15px 25px;
+		  color: #fff;
+		  text-decoration: none;
+		  font-size: 16px;
+		  transition: background 0.3s;
+		}
+	
+		.navbar > li > a:hover {
+		  background: #555;
+		}
+	
+		/* ===== 二级菜单 ===== */
+		.submenu {
+		  position: absolute;     /* 相对父级 li 定位 */
+		  top: 100%;              /* 紧贴一级菜单下方 */
+		  left: 0;
+		  background: #444;
+		  list-style: none;
+		  min-width: 140px;       /* 二级菜单最小宽度 */
+		  display: none;          /* 默认隐藏 */
+		  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+		}
+	
+		.submenu li a {
+		  display: block;
+		  padding: 12px 20px;
+		  color: #fff;
+		  text-decoration: none;
+		  white-space: nowrap;
+		}
+	
+		.submenu li a:hover {
+		  background: #666;
+		}
+	
+		/* ===== 鼠标放上去显示二级菜单 ===== */
+		.navbar > li:hover .submenu {
+		  display: block;
+		}
+		#content
+		{
+			height: 600px;
+		}
+	  </style>
+</head>
+<body>
+	<h2>信息资源网</h2>
+	<a href="old-index(别删).html">老网站</a>
+	<nav>
+		<ul class="navbar">
+			<li><a href="#">首页</a></li>
+			<li><a href="#">软件</a>
+				<ul class="submenu">
+					<li><a href="zl/A 软件/A01 安卓/list.php">安卓</a></li>
+					<li><a href="zl/A 软件/A02 windows/list.php">windows</a></li>
+					<li><a href="zl/A 软件/A04 浏览器插件/list.php">浏览器插件</a></li>
+				</ul>
+			</li>
+			<li><a href="zl/C 站长/index.html">站长</a></li>
+			<li><a href="zl/D 游戏/index.html">游戏</a></li>
+			<li><a href="zl/E 电子书/index.html">电子书</a></li>
+			<li><a href="zl/F 多媒体视听互动/index.html">多媒体视听互动</a></li>
+		</ul>
+	</nav>
+	<div id="content">
+		<h1>信息资源网，一个收录信息和资源的小站</h1>
+	</div>
+	<h3>相关链接</h3>
 <table>
 	<tr>
 		<td><a href="http://www.downcc.com/">绿色资源网</a></td>
@@ -44,3 +145,33 @@
 				  <a href="http://www.downcc.com/zhuanti/pdfyuedu.html" target="_blank">pdf阅读器下载</a> 
 				  <a href="http://www.downcc.com/zhuanti/ypfqrj.html" target="_blank">磁盘分区工具</a> <a href="http://www.downcc.com/zhuanti/printqinglingrj.html" target="_blank">打印机清零软件</a> <a href="http://www.downcc.com/k/game163/" target="_blank">网易手游</a> <a href="http://www.itmop.com/" target="_blank">绿软下载站</a> <a href="http://www.downyi.com/" target="_blank">当易网</a> <a href="http://www.downcc.com/k/xiaomiyouxi/" target="_blank">小米游戏</a> <a href="http://www.downcc.com/zhuanti/root.html" target="_blank">一键root工具</a> <a href="http://www.downcc.com/company/9.html" target="_blank">hp驱动下载</a> <a href="http://www.downcc.com/k/wangkaqudong/" target="_blank">万能网卡驱动</a> <a href="http://www.bkill.com/" target="_blank">比克尔下载</a> <a href="http://www.downcc.com/k/9game/" target="_blank">九游游戏</a> <a href="http://www.downcc.com/zhuanti/liulanqi.html" target="_blank">浏览器</a> <a href="http://www.downcc.com/zhuanti/zhibo.html" target="_blank">直播软件</a> <a href="https://www.anfensi.com/" target="_blank">安粉丝手游网</a> <a href="http://www.xfdown.com/" target="_blank">旋风软件园</a> <a href="http://www.danji100.com/" target="_blank">单机100手游网</a> 
 </div>
+<script>
+	var contentDiv = document.getElementById("content")
+	var submenu = document.getElementsByClassName("submenu")
+	for(var index = 0; index < submenu.length; index ++)
+	{
+		var each_li = submenu.item(index)
+		var all_a = each_li.getElementsByTagName("a")
+		for(var j = 0; j < all_a.length; j++)
+		{
+			var each_a = all_a.item(j);
+			each_a.addEventListener("click", function (event)
+			{
+				event.preventDefault()
+				var url = event.target.href
+				var request = new XMLHttpRequest()
+				request.open("GET", url)
+				request.onload = function ()
+				{
+					if (request.status == 200)
+					{
+						contentDiv.innerHTML = request.responseText
+					}
+				}
+				request.send()
+			})
+		}
+	}
+</script>
+</body>
+</html>
